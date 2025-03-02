@@ -6,6 +6,7 @@
     <title>Pathway to YouTube Clone</title>
     <link rel="stylesheet" href="pathway-dark.css">
     <link rel="icon" href="download.png">
+    <script type="module" src="login.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -27,7 +28,7 @@
         </div>
       </div>
       <div class="theme-selection">
-        <a style="display: inherit; text-decoration: none;" href="index.html">
+        <a style="display: inherit; text-decoration: none;" href="pathway.html">
           <button class="light-theme-button">Light theme</button>
         </a>
         <a style="display: inherit; text-decoration: none;" href="pathway-dark.html">
@@ -35,14 +36,12 @@
         </a>
       </div>
       <div class="input-section">
-        <input class="name" type="text" placeholder="Enter your name">
-        <input class="email" type="text" placeholder="Email">
-        <input class="password" type="text" placeholder="Password">
-        <input class="date" type="date">
+        <input class="name" type="text" placeholder="Enter your name" id="name" required>
+        <input class="email" type="email" placeholder="Email" id="email" required>
+        <input class="password" type="password" placeholder="Password" id="password" required>
         <div class="sub-container">
           <div class="submit-container">
-            <a href="https://pirates0247.github.io/PiratesTubeDark/">
-            <input class="submit" type="submit">
+            <input id="submit" required class="submit" type="submit">
             </a>
           </div>
         </div>
@@ -50,7 +49,7 @@
     </div>
     <script>
       alert('Welcome');
-      alert('This is just a sample no need Email,Password and date.\n Just click submit');
+      alert('Kindly provide us your name,email and password');
       document.querySelector('.light-theme-button')
        .addEventListener('click',() => {
         turnOffPrevious();
